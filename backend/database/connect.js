@@ -12,17 +12,17 @@ let database;
 const initDb = (callback) => {
     if (database) {//If database exist
         console.log("Database is already iniatilized");
-        return callback(null, databse);
+        return callback(null, database);
     }
     //else connect to mongodb url and then return the request of the client or return error
     MongoClient.connect(process.env.MONGODB_URI)
-    .then((client) => {
-        database = client;
-        callback(null, database);
-    })
-    .catch ((err) => {
-        callback(err);
-    })
+        .then((client) => {
+            database = client;
+            callback(null, database);
+        })
+        .catch ((err) => {
+            callback(err);
+        })
 };
 
 //get the database if initialized successfully
