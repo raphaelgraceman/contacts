@@ -20,10 +20,17 @@
   "homepage": "https://github.com/raphaelgraceman/contacts#readme",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "jslint": "^0.12.1"
   },
   "devDependencies": {
+    "eslint": "^9.22.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
     "mongodb": "^6.14.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
   }
 }
