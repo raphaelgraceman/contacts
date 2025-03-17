@@ -72,17 +72,18 @@ const updateContact = async (req, res) => {
 
 //Delete contact
 const deleteContact = async (req, res) => {
-     //#swagger tags =['contacts']
-    if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Must use a valid contact id to delete a contact.');
-    }
-    const userId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db().collection('contacts').remove({ _id: userId }, true);
-    console.log(response);
-    if (response.deletedCount > 0) {
-      res.status(204).send();
-    } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
-    }
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact id to delete a contact.');
+  }
+  const contactId = new ObjectId(req.params.id);
+  const response = await mongodb.getDatabase().db().collection('contacts').remove({ _id: contactId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+  }
 };
+
+
 module.exports = {getAll, getSingle, createContact, updateContact, deleteContact};
