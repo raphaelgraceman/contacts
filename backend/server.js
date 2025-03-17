@@ -17,7 +17,7 @@ app
 
 
 //A function to initialize mongodb
-mongodb.initDb((err) => { // Call the initDb function created in connect of databse folder
+mongodb.initDb((err) => { // Call the initDb function created in connect of database folder
     if(err) {console.log(err);
 
     }
