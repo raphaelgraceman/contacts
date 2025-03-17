@@ -4,16 +4,20 @@ const bodyParser = require('body-parser');
 const mongodb = require("./database/connect");
 const app = express();
 
+
 const port = process.env.PORT || 8080;
+app.use(bodyParser.json())
 
 app
-  .use(bodyParser.json())
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-.use("/", require("./routes"));
-
+  .use("/", require("./routes"));
+  
+process.on('uncaughtException', (err, origin) => {
+  console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
 
 
 //A function to initialize mongodb
