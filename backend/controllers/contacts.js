@@ -5,6 +5,7 @@ const ObjectId = require("mongodb").ObjectId
 
 //getAll contact data function
 const getAll = async(req, res) => {
+     //#swagger tags =['contacts']
     const result = await mongodb.getDatabase().db().collection("contacts").find();
     result.toArray().then((contacts) => {
         res.setHeader("Content-Type", "application/json");
@@ -14,6 +15,7 @@ const getAll = async(req, res) => {
 
 //getSingle contact form database
 const getSingle = async(req, res) => {
+     //#swagger tags =['contacts']
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid contact id to find a contact.');
     }
@@ -27,6 +29,7 @@ const getSingle = async(req, res) => {
 
 //Create Contact
 const createContact = async (req, res) => {
+     //#swagger tags =['contacts']
     const contact = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -44,6 +47,7 @@ const createContact = async (req, res) => {
 
 //Update contact
 const updateContact = async (req, res) => {
+     //#swagger tags =['contacts']
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid contact id to update a contact.');
     }
@@ -68,6 +72,7 @@ const updateContact = async (req, res) => {
 
 //Delete contact
 const deleteContact = async (req, res) => {
+     //#swagger tags =['contacts']
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid contact id to delete a contact.');
     }

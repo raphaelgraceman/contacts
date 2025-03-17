@@ -2,7 +2,13 @@ const router = require('express').Router();
 
 const contactRoute = require('./contacts')
 
-//router.get("/", (res, req) =>{    res.setEncoding(console.log("Hello World"))} );
+router.use('/', require('./swagger'));
+
+
+router.get("/", (req, res) => {  
+    //#swagger tags =['Hello World]
+    res.send("Hello World");
+});
 
 
 //Adding a route to get contacts
