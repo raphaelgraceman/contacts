@@ -1,12 +1,11 @@
 {
-  "name": "package.json",
+  "name": "crud-practice",
   "version": "1.0.0",
-  "description": "Contacts Api Project",
+  "description": "CRUD Practice",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "restart": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,19 +20,11 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "jslint": "^0.12.1",
+    "mongodb": "^6.15.0",
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "eslint": "^9.22.0",
-    "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.2.3",
-    "express-validator": "^7.2.1",
-    "mongodb": "^6.14.2",
-    "nodemon": "^3.1.9",
-    "prettier": "^3.5.3"
+    "nodemon": "^3.1.9"
   }
 }

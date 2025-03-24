@@ -10,7 +10,7 @@ GET http://localhost:8080/contacts
 GET http://localhost:8080/contacts/67d773636af74303a5dc1d3b
 
 
-### Create contact
+### Create contact 
 POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
@@ -28,13 +28,13 @@ content-type: application/json
 
 {
   "firstName": "Phiona",
-  "lastName": "Amoah",
+  "lastName": "Amoah Scott",
   "email": "raphaeltesting@test.com",
   "favoriteColor": "Grey",
   "birthday": "02/01/2009"
 }
 ### DELETE contact
-DELETE http://localhost:8080/contacts/6220b775099269ff7b31ceab HTTP/1.1
+DELETE http://localhost:8080/contacts/67d773636af74303a5dc1d3b HTTP/1.1
 
 
 
