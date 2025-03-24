@@ -6,7 +6,7 @@ const doc = {
     description: 'CRUD PRACTICE API'
   },
   host: 'localhost:3000',
-  schemes: ['http', 'https']
+  schemes: ['https', 'http']
 };
 
 const outputFile = './swagger.json';

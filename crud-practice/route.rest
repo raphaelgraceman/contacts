@@ -140,7 +140,7 @@ content-type: application/json
   "name": "Gasoline",
   "category": "Transportation",
   "date": "20/03/2025",
-  "amount": "50.00"
+  "amount": "100.00"
 }
 
 ### DELETE Employee Info
