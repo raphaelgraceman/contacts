@@ -9,10 +9,10 @@ GET http://localhost:3000/employees
 GET http://localhost:3000/expenses      
 
 ### getSingle employee info by id
-GET http://localhost:3000/employees/67d773636af74303a5dc1d3b
+GET http://localhost:3000/employees/67e14f677e6ca89b6791efa4
 
 ### getSingle expenses data by id
-GET http://localhost:3000/expenses/67d773636af74303a5dc1d3b
+GET http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7
 
 ### Add employee info 
 POST http://localhost:3000/employees HTTP/1.1
@@ -40,7 +40,7 @@ content-type: application/json
 }
 
 ### Update Employee Info by id
-PUT http://localhost:3000/employees/67d773636af74303a5dc1d3b HTTP/1.1
+PUT http://localhost:3000/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
 content-type: application/json
 
 {
@@ -54,7 +54,7 @@ content-type: application/json
 }
 
 ### Update Expenses data by id
-PUT http://localhost:3000/expenses/67d773636af74303a5dc1d3b HTTP/1.1
+PUT http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
 content-type: application/json
 
 {
@@ -66,47 +66,85 @@ content-type: application/json
 
 
 ### DELETE Employee Info
-DELETE http://localhost:3000/employees/67d773636af74303a5dc1d3b HTTP/1.1
+DELETE http://localhost:3000/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
 
 ### DELETE expenses data by id
-DELETE http://localhost:3000/expenses/67d773636af74303a5dc1d3b HTTP/1.1
+DELETE http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+
+
+
 
 
 
 // Render.com production Deployment
-### Get all contacts
-GET https://contacts-1v6q.onrender.com/contacts
+### Get all employees
+GET https://crud-practice-l9ii.onrender.com/employees
 
 
-### Get contact by id
-GET https://contacts-1v6q.onrender.com/contacts/622023f642f9ab4cd6e060b3
+### Get all expenses
+GET https://crud-practice-l9ii.onrender.com/expenses
+
+### Get employees by id
+GET https://crud-practice-l9ii.onrender.com/employees/67e14f677e6ca89b6791efa4
 
 
-### Create contact
-POST https://contacts-1v6q.onrender.com/contacts HTTP/1.1
+### Get expenses by id
+GET https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7
+
+
+### Add Employees Info
+POST https://crud-practice-l9ii.onrender.com/employees HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+"firstName": "#",
+"lastName": "#",
+"birthDay": "#",
+"email": "#",
+"department": "#",
+"appointmentDate": "#",
+"salary": "#"
 }
 
 
-### PUT contact
-PUT https://contacts-1v6q.onrender.com/contacts/67d773d56af74303a5dc1d3c HTTP/1.1
+### Add Expenses Data
+POST https://crud-practice-l9ii.onrender.com/expenses HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
+  "name": "Gasoline",
+  "category": "Transportation",
+  "date": "20/03/2025",
+  "amount": "50.00"
 }
 
+### Update Employee Info
+PUT https://crud-practice-l9ii.onrender.com/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
+content-type: application/json
 
-### DELETE contact
-DELETE https://contacts-1v6q.onrender.com/contacts/622023f642f9ab4cd6e060b3 HTTP/1.1
+{
+"firstName": "#",
+"lastName": "#",
+"birthDay": "#",
+"email": "#",
+"department": "#",
+"appointmentDate": "#",
+"salary": "#"
+}
+
+### Update Expenses Data
+PUT https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Gasoline",
+  "category": "Transportation",
+  "date": "20/03/2025",
+  "amount": "50.00"
+}
+
+### DELETE Employee Info
+DELETE https://crud-practice-l9ii.onrender.com/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
+
+### DELETE Expenses Data
+DELETE https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
